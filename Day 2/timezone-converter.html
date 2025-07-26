@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Zone Converter</title>
+  <link rel="stylesheet" href="timezone-converter.css">
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🕒 Time Zone Converter</h1>
+
+    <div class="input-group">
+      <label for="time">Enter Time:</label>
+      <input type="time" id="time" style="padding-right: -5px;" required >
+    </div>
+
+    <div class="input-group">
+      <label for="fromZone">From:</label>
+      <select name="fromZone" class="dropdown-select">
+       
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="toZone">To:</label>
+      <select name="toZone" class="dropdown-select">
+        
+      </select>
+    </div>
+
+    <button id="convertBtn">Convert</button>
+
+    <div class="result">
+      <p id="output">Converted time will appear here.</p>
+    </div>
+  </div>
+
+  <script type="module" src="timezone-converter.js"></script>
+</body>
+</html>
