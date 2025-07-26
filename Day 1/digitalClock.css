@@ -1,0 +1,96 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 60px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+}
+
+#clock {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #f9ca24;
+  text-shadow: 0 0 10px rgba(249, 202, 36, 0.6);
+}
+
+.switch {
+  margin-top: 20px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #ddd;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 2px;
+  top: 2px;
+  background-color: #1f1c2c;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+input:checked + .slider {
+  background-color: #f9ca24;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+.label-text {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+#period {
+  display: inline-block;
+  width: 50px;
+  text-align: left;
+}
+
